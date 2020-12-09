@@ -1,0 +1,42 @@
+<div class="centered-content">
+    <div class="modal-box">
+        <h1 class="title">
+            Edit Reservation
+        </h1>
+        <label>Edit Name:</label>
+        <p class="control is-expanded">
+            <input 
+                type="text" 
+                class="input has-background-light" 
+                #name 
+                [value]="reservation.name"
+                required>
+        </p>
+        <br>
+        <div >
+            <label>Time:</label>&nbsp;
+            <input type="number" #hours id="hours" name="hours" [value]="hrs" min="00" max="23">
+            <label>hours</label>
+            &nbsp;
+            <input type="number" #minutes id="minutes" name="minutes" [value]="mins" min="00" max="59">
+            <label>minutes</label>
+            
+        </div>
+        <br>
+        <label for="quantity">People: </label>
+        <input type="number" #people id="quantity" name="quantity" [value]="reservation.people" min="1" max="12">
+        
+        <div class="buttons is-right is-grouped" style="margin-top: 20px;">
+            <p class="control">
+                <a [routerLink]="['/reservations', ownerId]" class="button">
+                    Cancel
+                </a>
+            </p>
+            <p class="control">
+                <a class="button is-primary" (click)="edit(name.value, hours.value, minutes.value, people.value)">
+                  Save
+                </a>
+            </p>
+        </div>
+    </div>
+</div>

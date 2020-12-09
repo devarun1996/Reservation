@@ -1,0 +1,89 @@
+
+@import '../../main-styles.scss';
+
+
+.task-manager-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    //position: relative;
+}
+
+
+.task-list-container{
+    min-height: 100vh;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    background: $light;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.title{
+    font-family: 'Lato';
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button.is-primary.is-small{
+   position: absolute;
+   margin-top: 40%;
+   margin-left: 25%;
+    
+}
+
+.task{
+    background: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+    &:not(.is-complete){   
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+        &:hover {
+            box-shadow: 0 0 0 5px #eeeeee;
+        }
+    }
+    
+    &.is-complete{
+        text-decoration: line-through;
+        opacity: 0.7;
+    }
+}
+
+.icon2{
+    
+    .fa-trash{
+        cursor: pointer;
+        &:hover {
+            color: crimson;
+        }
+    }
+
+    .fa-edit{
+        cursor: pointer;
+        &:hover {
+            color: blue;
+        }
+    }
+}
+
+.button{
+    
+    &.is-danger{
+        position: absolute;
+        margin-left: 27%;
+        //margin-top: 40%;
+    }
+
+    &.is-link{
+        margin-left: 40%;
+    }
+}

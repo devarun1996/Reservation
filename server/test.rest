@@ -1,0 +1,33 @@
+Post http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "name": "Atul Verma",
+    "userName": "atlvrm",
+    "password": "123456",
+    "restaurant": "Atul cafe"
+}
+###
+
+GET http://localhost:3000/owner
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvd25lcl9pZCI6IjVmYWE3YTAzYWZkMmE0M2NlODkyMjMyNiIsIm5hbWUiOiJBcnVuIERldiIsInVzZXJOYW1lIjoiYXJuZHYiLCJpYXQiOjE2MDUwOTc4MDEsImV4cCI6MTYwNTcwMjYwMX0.7IYW2vW_I2SER0_FggwoLxuTjpMLcBMexqHcMxEidQY
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "userName": "arndv",
+    "password": "123456"
+}
+
+###
+
+POST http://localhost:3000/owner/5faa795dafd2a43ce8922325/reservation
+Content-Type: application/json
+
+{
+    "name": "Priya",
+    "people": 2, 
+    "time": "19:00"
+}

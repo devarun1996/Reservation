@@ -1,0 +1,41 @@
+<div class="centered-content">
+    <div class="modal-box">
+        <h1 class="title">
+            Create a new Reservation
+        </h1>
+        <label>Reservation for:</label>
+        <p class="control is-expanded">
+            <input 
+                type="text" 
+                class="input has-background-light" 
+                #name 
+                required>
+        </p>
+        <br>
+        <div >
+            <label>Time:</label>&nbsp;
+            <input type="number" #hrs id="hours" name="hours" min="00" max="23">
+            <label>hours</label>
+            &nbsp;
+            <input type="number" #mins id="minutes" name="minutes" min="00" max="59">
+            <label>minutes</label>
+            
+        </div>
+        <br>
+        <label for="quantity">People: </label>
+        <input type="number" #people id="quantity" name="quantity" value="0" min="1" max="12">
+        
+        <div class="buttons is-right is-grouped" style="margin-top: 20px;">
+            <p class="control">
+                <a [routerLink]="['/reservations', ownerId]" class="button">
+                    Cancel
+                </a>
+            </p>
+            <p class="control">
+                <a class="button is-primary" (click)="add(name.value, hrs.value, mins.value, people.value)">
+                  Add
+                </a>
+            </p>
+        </div>
+    </div>
+</div>

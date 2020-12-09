@@ -1,0 +1,44 @@
+<div class="centered-content">
+  
+  <div class="centered-content">
+
+      <div class="modal-box">
+        <h1 class="title has-text-link">
+            Login
+        </h1>
+
+        <div class="field">
+            <p class="control has-background-light has-icons-left has-icons-right">
+                <input class="input" #name type="text" placeholder="User-name">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </p>
+        </div>
+
+        <div class="field">
+            <p class="control has-background-light has-icons-left">
+              <input class="input" #password type="password" placeholder="Password">
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+          
+          <br>
+        <p class="control">
+            <button class="button is-link" (click)="login(name.value, password.value)">
+                Login
+            </button>
+        </p>
+            <br>
+        <p class="control">
+            <a routerLink="/" class="has-text-link">
+                  New? Sign up here!
+            </a>
+        </p>
+          
+
+    </div>
+
+  </div>

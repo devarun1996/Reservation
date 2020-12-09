@@ -1,0 +1,65 @@
+<div class="centered-content">
+    
+    <div class="modal-box">
+        <h1 class="title has-text-link">
+            Sign up
+        </h1>
+        
+        <div *ngIf="signup" class="notification is-link">
+          <button class="delete" (click)="remove()"></button>
+         <strong>Registered successfully!</strong>
+        </div>
+
+        <div class="field">
+            <p class="control has-background-light has-icons-left has-icons-right">
+                <input class="input" #name type="text" placeholder="Name">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </p>
+        </div>
+
+        <div class="field">
+            <p class="control has-background-light has-icons-left">
+              <input class="input" #username type="text" placeholder="User-name">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+            </p>
+          </div>
+
+          <div class="field">
+            <p class="control has-background-light has-icons-left">
+              <input class="input" #password type="password" placeholder="Password">
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+
+          <div class="field">
+            <p class="control has-background-light has-icons-left">
+              <input class="input" #restaurant type="text" placeholder="Restaurant">
+              <span class="icon is-small is-left">
+                <i class="fas fa-home"></i>
+              </span>
+            </p>
+          </div>
+          
+          <br>
+        <p class="control">
+            <button class="button is-link" (click)="register(name.value, username.value, password.value, restaurant.value)">
+                Register
+            </button>
+        </p>
+            <br>
+        <p class="control">
+            <a routerLink="/login" class="has-text-link">
+                  Already have an account? Login here!
+            </a>
+        </p>
+          
+
+    </div>
+
+</div>

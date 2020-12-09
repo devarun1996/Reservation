@@ -1,0 +1,34 @@
+<div class="centered-content">
+    <div class="task-manager-container">
+
+        <div class="task-list-container">
+            
+            <h1 class="title has-text-link">
+                {{restaurant}}
+            </h1>
+
+            <div *ngIf="empty">No Reservations!</div>
+            
+            <div class="task is-grouped" *ngFor="let reserv of reservations">
+                <span class="icon2 is-small is-pulled-right">
+                    <i class="fa fa-edit" [routerLink]="['./edit', reserv._id]"></i>&nbsp;
+                    <i class="fa fa-trash" (click)="delete(reserv._id)"></i>
+                </span> 
+                                    
+                <p> Name: {{reserv.name}}</p>
+                <p> Time: {{reserv.time}}</p>
+                <p> People: {{reserv.people}}</p>   
+                                      
+            </div>
+
+            <div>
+                <button class="button is-link is-rounded" routerLink="./add">+ New Reservation</button>
+            </div>    
+
+        </div>
+
+        <button (click)="logout()" class="button is-danger is-small">
+            Log out
+        </button>
+    </div>
+</div>
